@@ -62,8 +62,8 @@ export const decidedItems: DecidedItem[] = [
   },
   {
     id: 10,
-    title: "防水美耐板改為 N281A 胡桃木 4 山紋",
-    images: [],
+    title: "防水美耐板貼皮改為 N281A 胡桃木 4 山紋",
+    images: ["K.jpg"],
   },
 ];
 
