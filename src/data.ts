@@ -73,7 +73,7 @@ export const discussItems: DiscussItem[] = [
     id: 1,
     title: "一樓灰色管道間柱子待我思考一下",
     note: "可能也想聽聽看設計師不鹹的意見看是否要刷白？還在猶豫中",
-    images: ["原始.png", "留.jpg", "不留.jpg"],
+    images: ["原始.JPG", "留.jpg", "不留.JPG"],
   },
   {
     id: 2,
