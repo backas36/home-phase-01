@@ -41,19 +41,19 @@ export function ItemCard({ title, description, note, images, variant }: ItemCard
               className="relative group cursor-pointer"
             >
               <img
-                src={`${basePath}${img}.jpg`}
-                alt={`圖 ${img}`}
+                src={`${basePath}${img}`}
+                alt={`圖 ${img.split('.')[0]}`}
                 className="w-40 h-40 object-cover rounded border border-gray-300 group-hover:border-blue-500 transition-colors"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement
-                  target.src = `https://placehold.co/160x160/e5e7eb/9ca3af?text=${img}`
+                  target.src = `https://placehold.co/160x160/e5e7eb/9ca3af?text=${img.split('.')[0]}`
                 }}
               />
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity rounded">
                 <span className="text-white text-sm font-medium">點擊放大</span>
               </div>
               <span className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs text-center py-1 rounded-b">
-                圖 {img}
+                圖 {img.split('.')[0]}
               </span>
             </button>
           ))}
@@ -62,8 +62,8 @@ export function ItemCard({ title, description, note, images, variant }: ItemCard
 
       {selectedImage && (
         <ImageModal
-          imageSrc={`${basePath}${selectedImage}.jpg`}
-          imageAlt={`${selectedImage}`}
+          imageSrc={`${basePath}${selectedImage}`}
+          imageAlt={`圖 ${selectedImage.split('.')[0]}`}
           onClose={() => setSelectedImage(null)}
         />
       )}

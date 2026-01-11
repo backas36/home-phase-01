@@ -25,38 +25,38 @@ export const decidedItems: DecidedItem[] = [
   {
     id: 3,
     title: '二樓廁所馬桶旁層架示意圖',
-    images: ['A'],
+    images: ['A.jpg'],
   },
   {
     id: 4,
     title: '二樓洗手區域層板示意圖',
-    images: ['B'],
+    images: ['B.JPG'],
   },
   {
     id: 5,
     title: '廚房抽油煙機鎖點為吊掛器，要幫忙照示意圖增加夾板與層板位置示意圖，層板會有三個支撐鎖點',
-    images: ['C', 'D', 'E', 'F'],
+    images: ['C.png', 'D.jpg', 'E.jpg', 'F.jpg'],
   },
   {
     id: 6,
     title: '騎樓陽台磁磚為簽約簡報上那塊',
     description: '因為前幾次見面的時候好像我們雙方都以為是跟陽台的磁磚一樣，但後來翻出簡報才看到',
-    images: ['G'],
+    images: ['G.png'],
   },
   {
     id: 7,
     title: '提醒記得儲藏室隔一個輕隔間與廁所門上緣同高',
-    images: ['H'],
+    images: ['H.JPG'],
   },
   {
     id: 8,
     title: '三樓臉盆層板配置',
-    images: ['I'],
+    images: ['I.jpg'],
   },
   {
     id: 9,
     title: '一樓洗手台的層板上緣距離地面高度 70 cm',
-    images: ['J'],
+    images: ['J.jpg'],
   },
   {
     id: 10,
