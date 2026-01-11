@@ -60,7 +60,7 @@ export const decidedItems: DecidedItem[] = [
   },
   {
     id: 9,
-    title: "一樓洗手台的層板上緣距離地面高度 70 cm",
+    title: "一樓洗手台的層板與吊櫃配置",
     images: ["J.jpg"],
   },
   {
@@ -85,7 +85,7 @@ export const discussItems: DiscussItem[] = [
   },
   {
     id: 3,
-    title: "臉盆龍頭可以幫忙換美一點的歐式T型P管嗎, 是不是要加錢🫣",
+    title: "臉盆龍頭如果是換美一點的歐式T型P管嗎, 是不是要加錢🫣",
     images: ["T管.png"],
   },
 ];
