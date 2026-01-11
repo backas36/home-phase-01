@@ -35,7 +35,7 @@ export const decidedItems: DecidedItem[] = [
   {
     id: 5,
     title:
-      "廚房抽油煙機鎖點為吊掛器，要幫忙照示意圖增加夾板與層板位置示意圖，層板會有三個支撐鎖點",
+      "廚房抽油煙機鎖點為吊掛器(圖C)，要幫忙照示意圖增加夾板(圖D，圖E) 與層板位置示意圖，層板會有三個支撐鎖點 (圖F) ",
     images: ["C.png", "D.jpg", "E.jpg", "F.jpg"],
   },
   {
