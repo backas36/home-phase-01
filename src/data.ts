@@ -25,7 +25,7 @@ export const decidedItems: DecidedItem[] = [
   {
     id: 3,
     title: "二樓廁所馬桶旁層架示意圖",
-    images: ["A.jpg"],
+    images: ["A-1.jpg"],
   },
   {
     id: 4,
