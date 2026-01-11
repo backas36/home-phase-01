@@ -84,6 +84,6 @@ export const discussItems: DiscussItem[] = [
   {
     id: 3,
     title: "臉盆龍頭可以幫忙換美一點的歐式T型P管嗎, 是不是要加錢🫣",
-    images: ["T管.jpg"],
+    images: ["T管.png"],
   },
 ];

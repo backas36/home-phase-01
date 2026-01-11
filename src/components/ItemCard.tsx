@@ -60,7 +60,7 @@ export function ItemCard({ title, description, note, images, variant }: ItemCard
             ))}
           </div>
           <p className="text-sm text-amber-700 bg-amber-50 px-2 py-1 rounded mt-2">
-            ※ 圖片為 AI 生成示意，僅供參考尺寸與配置位置
+            ※ 示意圖僅供參考尺寸與配置位置
           </p>
         </>
       )}
