@@ -9,6 +9,7 @@ export interface DiscussItem {
   id: number;
   title: string;
   note?: string;
+  images: string[];
 }
 
 export const decidedItems: DecidedItem[] = [
@@ -72,14 +73,17 @@ export const discussItems: DiscussItem[] = [
     id: 1,
     title: "一樓灰色管道間柱子待我思考一下",
     note: "可能也想聽聽看設計師不鹹的意見看是否要刷白？還在猶豫中",
+    images: [],
   },
   {
     id: 2,
     title: "一到三樓廁所雅朵門幫忙確認是否可以改這扇沒有玻璃的",
     note: "如果一樓的可以沒有透氣窗更好",
+    images: [],
   },
   {
     id: 3,
     title: "臉盆龍頭可以幫忙換美一點的歐式 P 管嗎",
+    images: [],
   },
 ];

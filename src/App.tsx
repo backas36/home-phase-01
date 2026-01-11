@@ -51,7 +51,7 @@ function App() {
                 key={item.id}
                 title={item.title}
                 note={item.note}
-                images={[]}
+                images={item.images}
                 variant="discuss"
               />
             ))}
