@@ -30,8 +30,8 @@ export const decidedItems: DecidedItem[] = [
   },
   {
     id: 4,
-    title: "二樓洗手區域層板示意圖",
-    images: ["B.JPG"],
+    title: "二樓洗手區域層板示意圖，以及臉盆尺寸參考",
+    images: ["B.JPG", "2F臉盆尺寸.webp"],
   },
   {
     id: 5,
