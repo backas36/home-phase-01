@@ -30,6 +30,7 @@ function App() {
                 description={item.description}
                 images={item.images}
                 variant="decided"
+                status={item.status}
               />
             ))}
           </div>

@@ -1,8 +1,11 @@
+export type ItemStatus = "completed" | "pending";
+
 export interface DecidedItem {
   id: number;
   title: string;
   description?: string;
   images: string[];
+  status: ItemStatus;
 }
 
 export interface DiscussItem {
@@ -17,21 +20,25 @@ export const decidedItems: DecidedItem[] = [
     id: 1,
     title: "一樓客廳窗簾盒取消不做",
     images: [],
+    status: "pending",
   },
   {
     id: 2,
     title: "三樓公共區域電熱水器改為直立式",
     images: [],
+    status: "completed",
   },
   {
     id: 3,
     title: "二樓廁所馬桶旁層架示意圖",
     images: ["A-1.jpg"],
+    status: "pending",
   },
   {
     id: 4,
     title: "二樓洗手區域層板示意圖，以及臉盆尺寸參考",
     images: ["B-2.JPG", "2F臉盆尺寸.webp"],
+    status: "pending",
   },
   {
     id: 5,
@@ -40,48 +47,49 @@ export const decidedItems: DecidedItem[] = [
     description:
       "位置在油機孔那面牆，向右97（52+45）中心點位置抓100中心點位置也可以，地面往上100位置（板子下緣）上一塊5分夾板，或是2塊木心板加強",
     images: ["C.png", "D.jpg", "E.jpg", "F.jpg"],
-  },
-  {
-    id: 6,
-    title: "騎樓陽台磁磚為簽約簡報上那塊",
-    description:
-      "因為前幾次見面的時候好像我們雙方都以為是跟陽台的磁磚一樣，但後來翻出簡報才看到",
-    images: ["G.png"],
+    status: "completed",
   },
   {
     id: 7,
     title: "提醒記得儲藏室隔一個輕隔間與廁所門上緣同高",
-    images: ["H.JPG"],
+    images: ["H.webp"],
+    status: "pending",
   },
   {
     id: 8,
     title: "三樓臉盆層板配置",
     images: ["I-2.jpg"],
+    status: "pending",
   },
   {
     id: 9,
     title: "一樓洗手台的層板與吊櫃配置",
     images: ["J.jpg"],
+    status: "pending",
   },
   {
     id: 10,
     title: "防水美耐板貼皮改為 N281A 胡桃木 4 山紋",
     images: ["K.jpg"],
+    status: "pending",
   },
   {
     id: 11,
     title: "一樓廚房、二三樓廁所崁燈9cm",
     images: [],
+    status: "pending",
   },
   {
     id: 12,
     title: "一樓廁所油漆直接刷透明漆",
     images: [],
+    status: "pending",
   },
   {
     id: 13,
     title: "一樓半牆保留、灰色柱子漆 1501",
     images: ["L.jpg"],
+    status: "pending",
   },
 ];
 

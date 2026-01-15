@@ -7,22 +7,36 @@ interface ItemCardProps {
   note?: string
   images: string[]
   variant: 'decided' | 'discuss'
+  status?: 'completed' | 'pending'
 }
 
-export function ItemCard({ title, description, note, images, variant }: ItemCardProps) {
+export function ItemCard({ title, description, note, images, variant, status }: ItemCardProps) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   const basePath = import.meta.env.BASE_URL + 'images/'
 
   return (
     <div
-      className={`rounded-lg border p-4 ${
+      className={`relative rounded-lg border p-4 ${
         variant === 'decided'
-          ? 'border-green-200 bg-green-50'
+          ? status === 'completed'
+            ? 'border-gray-300 bg-gray-50'
+            : 'border-green-500 bg-green-100'
           : 'border-yellow-200 bg-yellow-50'
       }`}
     >
-      <h3 className="text-lg font-semibold text-gray-800 mb-2">{title}</h3>
+      {variant === 'decided' && (
+        <span
+          className={`absolute top-2 right-2 px-2 py-0.5 text-xs rounded-full font-medium ${
+            status === 'completed'
+              ? 'bg-gray-400 text-white'
+              : 'bg-green-600 text-white'
+          }`}
+        >
+          {status === 'completed' ? '✓ 已完工' : '未完工'}
+        </span>
+      )}
+      <h3 className="text-lg font-semibold text-gray-800 mb-2 pr-16">{title}</h3>
 
       {description && (
         <p className="text-sm text-gray-600 mb-2">{description}</p>
