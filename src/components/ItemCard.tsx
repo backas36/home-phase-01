@@ -15,65 +15,72 @@ export function ItemCard({ title, description, note, images, variant, status }: 
 
   const basePath = import.meta.env.BASE_URL + 'images/'
 
+  const cardStyles = {
+    decided: status === 'completed'
+      ? 'border-border bg-white/60 opacity-75'
+      : 'border-success/30 bg-success-light',
+    discuss: 'border-warning/30 bg-warning-light'
+  }
+
   return (
     <div
-      className={`relative rounded-lg border p-4 ${
-        variant === 'decided'
-          ? status === 'completed'
-            ? 'border-gray-300 bg-gray-50'
-            : 'border-green-500 bg-green-100'
-          : 'border-yellow-200 bg-yellow-50'
-      }`}
+      className={`relative rounded-xl border-2 p-5 sm:p-6 transition-shadow duration-200 hover:shadow-md ${cardStyles[variant]}`}
     >
       {variant === 'decided' && (
         <span
-          className={`absolute top-2 right-2 px-2 py-0.5 text-xs rounded-full font-medium ${
+          className={`absolute top-3 right-3 px-2.5 py-1 text-xs rounded-full font-semibold ${
             status === 'completed'
-              ? 'bg-gray-400 text-white'
-              : 'bg-green-600 text-white'
+              ? 'bg-muted text-white'
+              : 'bg-success text-white'
           }`}
+          role="status"
+          aria-label={status === 'completed' ? '已完工' : '未完工'}
         >
           {status === 'completed' ? '✓ 已完工' : '未完工'}
         </span>
       )}
-      <h3 className="text-lg font-semibold text-gray-800 mb-2 pr-16">{title}</h3>
+      <h3 className="font-heading text-lg sm:text-xl font-semibold text-primary mb-2 pr-20">{title}</h3>
 
       {description && (
-        <p className="text-sm text-gray-600 mb-2">{description}</p>
+        <p className="text-sm sm:text-base text-secondary leading-relaxed mb-3">{description}</p>
       )}
 
       {note && (
-        <p className="text-sm text-amber-700 italic mb-2">{note}</p>
+        <p className="text-sm sm:text-base text-warning italic mb-3">{note}</p>
       )}
 
       {images.length > 0 && (
         <>
-          <div className="flex flex-wrap gap-2 mt-3">
-            {images.map((img) => (
-              <button
-                key={img}
-                onClick={() => setSelectedImage(img)}
-                className="relative group cursor-pointer"
-              >
-                <img
-                  src={`${basePath}${img}`}
-                  alt={`圖 ${img.split('.')[0]}`}
-                  className="w-40 h-40 object-cover rounded border border-gray-300 group-hover:border-blue-500 transition-colors"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement
-                    target.src = `https://placehold.co/160x160/e5e7eb/9ca3af?text=${img.split('.')[0]}`
-                  }}
-                />
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity rounded">
-                  <span className="text-white text-sm font-medium">點擊放大</span>
-                </div>
-                <span className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs text-center py-1 rounded-b">
-                  圖 {img.split('.')[0]}
-                </span>
-              </button>
-            ))}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 mt-4">
+            {images.map((img) => {
+              const imageName = img.split('.')[0]
+              return (
+                <button
+                  key={img}
+                  onClick={() => setSelectedImage(img)}
+                  className="relative group cursor-pointer focus:outline-none focus:ring-2 focus:ring-cta focus:ring-offset-2 rounded-lg"
+                  aria-label={`查看 ${title} 的參考圖片 ${imageName}`}
+                >
+                  <img
+                    src={`${basePath}${img}`}
+                    alt={`${title} - 參考圖片 ${imageName}`}
+                    className="w-full aspect-square object-cover rounded-lg border-2 border-border group-hover:border-cta transition-all duration-200 group-hover:shadow-lg"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement
+                      target.src = `https://placehold.co/160x160/e5e7eb/9ca3af?text=${imageName}`
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-200 rounded-lg">
+                    <span className="text-white text-sm font-semibold">點擊放大</span>
+                  </div>
+                  <span className="absolute bottom-0 left-0 right-0 bg-primary/80 text-white text-xs text-center py-1.5 rounded-b-lg font-medium">
+                    {imageName}
+                  </span>
+                </button>
+              )
+            })}
           </div>
-          <p className="text-sm text-amber-700 bg-amber-50 px-2 py-1 rounded mt-2">
+          <p className="text-sm text-warning bg-warning-light/50 px-3 py-2 rounded-lg mt-4 border border-warning/20">
             ※ 示意圖僅供參考尺寸與配置位置
           </p>
         </>

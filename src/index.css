@@ -1,6 +1,29 @@
 @import "tailwindcss";
 
+@theme {
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+
+  /* Professional B2B Color Palette */
+  --color-primary: #0F172A;
+  --color-secondary: #334155;
+  --color-cta: #0369A1;
+  --color-bg: #F8FAFC;
+  --color-text: #020617;
+  --color-border: #E2E8F0;
+
+  /* Status Colors */
+  --color-success: #16A34A;
+  --color-success-light: #DCFCE7;
+  --color-warning: #CA8A04;
+  --color-warning-light: #FEF9C3;
+  --color-muted: #64748B;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }

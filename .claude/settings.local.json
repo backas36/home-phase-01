@@ -22,7 +22,9 @@
       "Bash(pnpm tsc:*)",
       "Bash(npx sharp:*)",
       "Bash(node -e:*)",
-      "Bash(pnpm dev)"
+      "Bash(pnpm dev)",
+      "Skill(ui-ux-pro-max)",
+      "Bash(python3:*)"
     ]
   }
 }
