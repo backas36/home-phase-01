@@ -31,7 +31,7 @@ export const decidedItems: DecidedItem[] = [
   {
     id: 4,
     title: "二樓洗手區域層板示意圖，以及臉盆尺寸參考",
-    images: ["B.JPG", "2F臉盆尺寸.webp"],
+    images: ["B-2.JPG", "2F臉盆尺寸.webp"],
   },
   {
     id: 5,
@@ -56,7 +56,7 @@ export const decidedItems: DecidedItem[] = [
   {
     id: 8,
     title: "三樓臉盆層板配置",
-    images: ["I.jpg"],
+    images: ["I-2.jpg"],
   },
   {
     id: 9,
@@ -68,15 +68,30 @@ export const decidedItems: DecidedItem[] = [
     title: "防水美耐板貼皮改為 N281A 胡桃木 4 山紋",
     images: ["K.jpg"],
   },
+  {
+    id: 11,
+    title: "一樓廚房、二三樓廁所崁燈9cm",
+    images: [],
+  },
+  {
+    id: 12,
+    title: "一樓廁所油漆直接刷透明漆",
+    images: [],
+  },
+  {
+    id: 13,
+    title: "一樓半牆保留、灰色柱子漆 1501",
+    images: ["L.jpg"],
+  },
 ];
 
 export const discussItems: DiscussItem[] = [
-  {
-    id: 1,
-    title: "一樓灰色管道間柱子待我思考一下",
-    note: "可能也想聽聽看設計師不鹹的意見底下有幾個方案在選擇中，真是猶豫",
-    images: ["原始.JPG", "留.jpg", "不留.JPG", "白柱留牆.PNG"],
-  },
+  //{
+  //  id: 1,
+  //  title: "一樓灰色管道間柱子待我思考一下",
+  //  note: "可能也想聽聽看設計師不鹹的意見底下有幾個方案在選擇中，真是猶豫",
+  //  images: ["原始.JPG", "留.jpg", "不留.JPG", "白柱留牆.PNG"],
+  //},
   {
     id: 2,
     title: "一到三樓廁所雅朵門幫忙確認是否可以改這扇沒有玻璃的",
