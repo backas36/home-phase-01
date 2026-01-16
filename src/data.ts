@@ -20,7 +20,7 @@ export const decidedItems: DecidedItem[] = [
     id: 1,
     title: "一樓客廳窗簾盒取消不做",
     images: [],
-    status: "pending",
+    status: "completed",
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ export const decidedItems: DecidedItem[] = [
   {
     id: 4,
     title: "二樓洗手區域層板示意圖，以及臉盆尺寸參考",
-    images: ["B-2.JPG", "2F臉盆尺寸.webp"],
+    images: ["B-3.JPG", "2F臉盆尺寸.webp"],
     status: "pending",
   },
   {
@@ -91,6 +91,13 @@ export const decidedItems: DecidedItem[] = [
     images: ["L.jpg"],
     status: "pending",
   },
+  {
+    id: 2,
+    title: "一到三樓廁所雅朵門幫忙確認是否可以改這扇沒有玻璃的",
+    description: "如果一樓的可以沒有透氣窗更好",
+    images: ["廁所門.jpg"],
+    status: "pending",
+  },
 ];
 
 export const discussItems: DiscussItem[] = [
@@ -100,15 +107,9 @@ export const discussItems: DiscussItem[] = [
   //  note: "可能也想聽聽看設計師不鹹的意見底下有幾個方案在選擇中，真是猶豫",
   //  images: ["原始.JPG", "留.jpg", "不留.JPG", "白柱留牆.PNG"],
   //},
-  {
-    id: 2,
-    title: "一到三樓廁所雅朵門幫忙確認是否可以改這扇沒有玻璃的",
-    note: "如果一樓的可以沒有透氣窗更好",
-    images: ["廁所門.jpg"],
-  },
-  {
-    id: 3,
-    title: "臉盆龍頭如果是換美一點的歐式T型P管嗎, 是不是要加錢🫣",
-    images: ["T管.png"],
-  },
+  //{
+  //  id: 3,
+  //  title: "臉盆龍頭如果是換美一點的歐式T型P管嗎, 是不是要加錢🫣",
+  //  images: ["T管.png"],
+  //},
 ];
